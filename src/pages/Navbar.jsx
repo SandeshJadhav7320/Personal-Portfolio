@@ -6,7 +6,7 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 w-full bg-transparent text-white z-50">
       <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-        <h1 className="text-xl font-bold text-2xl">My Portfolio</h1>
+        <h1 className=" font-bold text-4xl">My Portfolio</h1>
 
         {/* Hamburger Icon */}
         <div className="md:hidden">
