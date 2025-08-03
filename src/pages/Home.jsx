@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
 import Navbar from "/src/pages/Navbar";
 import self from "../assets/self.jpeg";
+import About from "./About";
 
 function Home() {
   return (
@@ -84,8 +85,10 @@ function Home() {
           </div>
         </div>
       </section>
+
+      {/* ✅ About Section */}
+      <About />
     </>
   );
 }
-
 export default Home;
