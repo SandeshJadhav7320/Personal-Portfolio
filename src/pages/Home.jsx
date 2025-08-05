@@ -3,6 +3,7 @@ import { Typewriter } from "react-simple-typewriter";
 import Navbar from "/src/pages/Navbar";
 import self from "../assets/self.jpeg";
 import About from "./About";
+import Skills from "./Skills";
 
 function Home() {
   return (
@@ -88,6 +89,7 @@ function Home() {
 
       {/* ✅ About Section */}
       <About />
+      <Skills />
     </>
   );
 }

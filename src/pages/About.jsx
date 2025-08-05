@@ -30,7 +30,7 @@ function About() {
   return (
     <section
       id="about"
-      className="py-20 min-h-screen bg-darkBlue text-white px-6 flex items-center justify-center"
+      className="pt-6 pb-6 min-h-screen bg-darkBlue text-white px-6 flex items-center justify-center"
     >
       <div className="max-w-6xl w-full text-center space-y-12">
         {/* Heading */}

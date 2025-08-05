@@ -41,7 +41,7 @@ const Navbar = () => {
         <ul className="hidden md:flex space-x-14">
           <li><a href="#home" className="hover:text-gray-500 font-bold text-2xl">Home</a></li>
           <li><a href="#about" className="hover:text-gray-500 font-bold text-2xl">About</a></li>
-          <li><a href="#about" className="hover:text-gray-500 font-bold text-2xl">About</a></li>
+          <li><a href="#skills" className="hover:text-gray-500 font-bold text-2xl">Skills</a></li>
           <li><a href="#projects" className="hover:text-gray-500 font-bold text-2xl">Projects</a></li>
           <li><a href="#contact" className="hover:text-gray-500 font-bold text-2xl">Contact</a></li>
         </ul>
