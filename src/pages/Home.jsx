@@ -4,6 +4,7 @@ import Navbar from "/src/pages/Navbar";
 import self from "../assets/self.jpeg";
 import About from "./About";
 import Skills from "./Skills";
+import Projects from "./Projects";
 
 function Home() {
   return (
@@ -90,6 +91,7 @@ function Home() {
       {/* ✅ About Section */}
       <About />
       <Skills />
+      <Projects/>
     </>
   );
 }
