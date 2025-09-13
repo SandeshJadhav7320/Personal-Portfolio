@@ -1,6 +1,7 @@
 // src/components/Skills.jsx
 
 import { motion } from "framer-motion";
+import Tilt from "react-parallax-tilt";
 import { FaReact, FaJava, FaGithub, FaDatabase } from "react-icons/fa";
 import { SiTailwindcss, SiSpringboot, SiMysql } from "react-icons/si";
 
@@ -58,22 +59,31 @@ function Skills() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
               viewport={{ once: true }}
-              className="bg-[#112240] p-6 rounded-xl shadow-lg border border-cyan-600"
             >
-              <h3 className="text-xl font-semibold text-cyan-400 mb-4">
-                {category.title}
-              </h3>
-              <ul className="space-y-3">
-                {category.skills.map((skill, i) => (
-                  <li
-                    key={i}
-                    className="flex items-center gap-3 text-sm text-gray-200"
-                  >
-                    <span className="text-cyan-400 text-lg">{skill.icon}</span>
-                    {skill.name}
-                  </li>
-                ))}
-              </ul>
+              <Tilt
+                glareEnable={true}
+                glareMaxOpacity={0.2}
+                scale={1.05}
+                transitionSpeed={250}
+                className="rounded-xl"
+              >
+                <div className="bg-[#112240] p-6 rounded-xl shadow-lg border border-cyan-600 hover:shadow-cyan-500/30 transition-shadow duration-300">
+                  <h3 className="text-xl font-semibold text-cyan-400 mb-4">
+                    {category.title}
+                  </h3>
+                  <ul className="space-y-3">
+                    {category.skills.map((skill, i) => (
+                      <li
+                        key={i}
+                        className="flex items-center gap-3 text-sm text-gray-200"
+                      >
+                        <span className="text-cyan-400 text-lg">{skill.icon}</span>
+                        {skill.name}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </Tilt>
             </motion.div>
           ))}
         </div>
