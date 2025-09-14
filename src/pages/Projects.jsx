@@ -5,6 +5,7 @@ import Tilt from "react-parallax-tilt";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import portfolioHome from "../assets/PortfolioHome.png"; // adjust path
 import carrerhome from "../assets/carrerhome.png";
+import HosImg from "../assets/HspImg.png";
 
 
 function Projects() {
@@ -25,6 +26,14 @@ function Projects() {
       img: carrerhome,
       github: "https://github.com/SandeshJadhav7320/Career-Guidance-Platform",
       demo: "https://career-guidance-platform.vercel.app/",
+    },
+    {
+      title: "Hospital Managment System",
+      description:
+        "Hospital Management System is a software application used for hospital managment. It helps in managing patient records, appointments, view appointments,doctor schedules. The system typically allows users to easily access patient details and doctors details.",
+      img: HosImg,
+      github: "https://github.com/SandeshJadhav7320/SandeshJadhav7320-Hospital-Management-System",
+      demo: "http://localhost:8080/Hospital_Manegament/",
     },
   ];
 
