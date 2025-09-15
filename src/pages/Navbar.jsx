@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -39,21 +40,22 @@ const Navbar = () => {
 
         {/* Desktop Links */}
         <ul className="hidden md:flex space-x-14">
-          <li><a href="#home" className="hover:text-gray-500 font-bold text-2xl">Home</a></li>
-          <li><a href="#about" className="hover:text-gray-500 font-bold text-2xl">About</a></li>
-          <li><a href="#skills" className="hover:text-gray-500 font-bold text-2xl">Skills</a></li>
-          <li><a href="#projects" className="hover:text-gray-500 font-bold text-2xl">Projects</a></li>
-          <li><a href="#contact" className="hover:text-gray-500 font-bold text-2xl">Contact</a></li>
+          <li><Link to="/" className="hover:text-gray-500 font-bold text-2xl">Home</Link></li>
+          <li><Link to="/about" className="hover:text-gray-500 font-bold text-2xl">About</Link></li>
+          <li><Link to="/skills" className="hover:text-gray-500 font-bold text-2xl">Skills</Link></li>
+          <li><Link to="/projects" className="hover:text-gray-500 font-bold text-2xl">Projects</Link></li>
+          <li><Link to="#contact" className="hover:text-gray-500 font-bold text-2xl">Contact</Link></li>
         </ul>
       </div>
 
       {/* Mobile Menu */}
       {isOpen && (
         <ul className="md:hidden px-4 pb-4 bg-black bg-opacity-80 text-white space-y-4">
-          <li><a href="#home" onClick={() => setIsOpen(false)}>Home</a></li>
-          <li><a href="#about" onClick={() => setIsOpen(false)}>About</a></li>
-          <li><a href="#projects" onClick={() => setIsOpen(false)}>Projects</a></li>
-          <li><a href="#contact" onClick={() => setIsOpen(false)}>Contact</a></li>
+          <li><Link to="#home" onClick={() => setIsOpen(false)}>Home</Link></li>
+          <li><Link to="/about" onClick={() => setIsOpen(false)}>About</Link></li>
+          <li><Link to="/projects" onClick={() => setIsOpen(false)}>Projects</Link></li>
+          <li><Link to="/skills" onClick={() => setIsOpen(false)}>Skills</Link></li>
+          <li><Link to="#contact" onClick={() => setIsOpen(false)}>Contact</Link></li>
         </ul>
       )}
     </nav>

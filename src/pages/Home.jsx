@@ -2,9 +2,7 @@ import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
 import Navbar from "/src/pages/Navbar";
 import self from "../assets/self.jpeg";
-import About from "./About";
-import Skills from "./Skills";
-import Projects from "./Projects";
+
 
 function Home() {
   return (
@@ -88,10 +86,7 @@ function Home() {
         </div>
       </section>
 
-      {/* ✅ About Section */}
-      <About />
-      <Skills />
-      <Projects/>
+     
     </>
   );
 }
