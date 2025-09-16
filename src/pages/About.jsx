@@ -5,8 +5,9 @@ import Tilt from "react-parallax-tilt";
 import { FaCode, FaDatabase, FaTools } from "react-icons/fa";
 import CountUp from "react-countup";
 import Navbar from "./Navbar";
+import self2 from "../assets/self2.jpeg";
 
-function About() {
+function About() { 
   const skills = [
     {
       title: "Frontend",
@@ -30,10 +31,10 @@ function About() {
 
   return (
     <>
-      <Navbar></Navbar>
+      <Navbar />
       <section
         id="about"
-        className=" py-28 bg-darkBlue text-white px-6 flex items-center justify-center -mb-4"
+        className="py-28 bg-darkBlue text-white px-6 flex items-center justify-center -mb-4"
       >
         <div className="max-w-6xl w-full text-center space-y-12">
           {/* Heading */}
@@ -47,27 +48,58 @@ function About() {
             About Me
           </motion.h2>
 
-          {/* Description Text */}
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.2, delay: 0.3 }}
-            viewport={{ once: true }}
-            className="space-y-6 text-lg sm:text-xl leading-relaxed"
-          >
-            <p>
-              I'm <strong>Sandesh Jadhav</strong>, a Java developer passionate about full-stack
-              development using <strong>React</strong>, <strong>Spring Boot</strong>, and{" "}
-              <strong>MySQL</strong>.
-            </p>
-            <p>
-              I use <strong>GitHub</strong> for version control and enjoy learning new
-              technologies while turning ideas into real projects.
-            </p>
-          </motion.div>
+          {/* Image + Text Side by Side */}
+          <div className="flex flex-col md:flex-row items-center md:items-start gap-10 text-left">
+            
+           <div className="relative w-84 h-80 md:w-[600px] md:h-[400px] lg:w-[550px] lg:h-[450px] flex items-center justify-center">
+                {/* Animated Gradient Glow */}
+                <div className="absolute inset-0 rounded-full 
+                                bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 
+                                bg-[length:200%_200%] animate-gradientWave 
+                                blur-3xl opacity-80"></div>
+
+                {/* Profile Image */}
+                <img
+                  src={self2}
+                  alt="Profile"
+                  className="relative w-72 h-72 md:w-[360px] md:h-[360px] lg:w-[400px] lg:h-[400px] rounded-full object-cover z-10 border-[6px] border-white shadow-2xl"
+                />
+            </div>
+
+              {/* Text */}
+                        <motion.div
+                  initial={{ opacity: 0, x: 50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 1 }}
+                  viewport={{ once: true }}
+                  className="space-y-6 text-lg sm:text-xl leading-relaxed max-w-xl"
+                >
+
+
+                      
+              <p>
+                I'm <strong>Sandesh Jadhav</strong>, a passionate <strong>Java Developer</strong> 
+                and <strong>Full-Stack Enthusiast</strong> with experience in building scalable 
+                and efficient web applications.
+              </p>
+              <p>
+                Skilled in <strong>React</strong>, <strong>Spring Boot</strong>, and <strong>MySQL</strong>, 
+                I specialize in transforming ideas into real-world solutions with clean and maintainable code.
+              </p>
+              <p>
+                I’m always eager to explore <strong>new frameworks</strong>, optimize performance, and 
+                leverage technology to solve impactful problems.
+              </p>
+              <p>
+                My goal is to grow as a versatile developer and contribute to innovative projects that matter.
+              </p>
+            </motion.div>
+
+            
+          </div>
 
           {/* Skill Cards */}
-          <div className="flex flex-col md:flex-row gap-6 justify-center mt-10">
+          <div className="flex flex-col md:flex-row gap-6 justify-center mt-16">
             {skills.map((item, index) => (
               <Tilt glareEnable={true} glareColor="#00ffff" glareMaxOpacity={0.2} glarePosition="all" key={index}>
                 <motion.div
@@ -103,7 +135,6 @@ function About() {
         </div>
       </section>
     </>
-    
   );
 }
 
