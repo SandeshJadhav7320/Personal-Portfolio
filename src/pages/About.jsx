@@ -49,54 +49,79 @@ function About() {
           </motion.h2>
 
           {/* Image + Text Side by Side */}
-          <div className="flex flex-col md:flex-row items-center md:items-start gap-10 text-left">
-            
-           <div className="relative w-84 h-80 md:w-[600px] md:h-[400px] lg:w-[550px] lg:h-[450px] flex items-center justify-center">
-                {/* Animated Gradient Glow */}
-                <div className="absolute inset-0 rounded-full 
-                                bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 
-                                bg-[length:200%_200%] animate-gradientWave 
-                                blur-3xl opacity-80"></div>
+<div className="flex flex-col md:flex-row items-center md:items-start gap-10 text-left">
+  
+  {/* Profile Image with animation */}
+  <motion.div
+    initial={{ opacity: 0, x: -60 }}
+    whileInView={{ opacity: 1, x: 0 }}
+    transition={{ duration: 1 }}
+    viewport={{ once: true }}
+    className="relative w-84 h-80 md:w-[600px] md:h-[400px] lg:w-[550px] lg:h-[450px] flex items-center justify-center"
+  >
+    <div className="absolute inset-0 rounded-full 
+                    bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 
+                    bg-[length:200%_200%] animate-gradientWave 
+                    blur-3xl opacity-80"></div>
 
-                {/* Profile Image */}
-                <img
-                  src={self2}
-                  alt="Profile"
-                  className="relative w-72 h-72 md:w-[360px] md:h-[360px] lg:w-[400px] lg:h-[400px] rounded-full object-cover z-10 border-[6px] border-white shadow-2xl"
-                />
-            </div>
+    <img
+      src={self2}
+      alt="Profile"
+      className="relative w-72 h-72 md:w-[360px] md:h-[360px] lg:w-[400px] lg:h-[400px] 
+                 rounded-full object-cover z-10 border-[6px] border-white shadow-2xl"
+    />
+  </motion.div>
 
-              {/* Text */}
-                        <motion.div
-                  initial={{ opacity: 0, x: 50 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 1 }}
-                  viewport={{ once: true }}
-                  className="space-y-6 text-lg sm:text-xl leading-relaxed max-w-xl"
-                >
+  {/* Bio Text with animation */}
+  <motion.div
+    initial={{ opacity: 0, x: 60 }}
+    whileInView={{ opacity: 1, x: 0 }}
+    transition={{ duration: 1, delay: 0.2 }}
+    viewport={{ once: true }}
+    className="space-y-6 text-lg sm:text-xl leading-relaxed max-w-xl"
+  >
+    <p>
+      I'm <strong>Sandesh Jadhav</strong>, a passionate <strong>Java Developer</strong> 
+      and <strong>Full-Stack Enthusiast</strong> with experience in building scalable 
+      and efficient web applications.
+    </p>
+    <p>
+      Skilled in <strong>React</strong>, <strong>Spring Boot</strong>, and <strong>MySQL</strong>, 
+      I specialize in transforming ideas into real-world solutions with clean and maintainable code.
+    </p>
+    <p>
+      I’m always eager to explore <strong>new frameworks</strong>, optimize performance, and 
+      leverage technology to solve impactful problems.
+    </p>
+    <p>
+      My goal is to grow as a versatile developer and contribute to innovative projects that matter.
+    </p>
 
+    {/* CV Buttons with animation */}
+    <motion.div
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, delay: 0.5 }}
+      viewport={{ once: true }}
+      className="flex flex-col sm:flex-row gap-6 mt-6"
+    >
+      <motion.a
+        href="/CV.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.95 }}
+        className="inline-block px-6 py-3 text-lg font-semibold text-cyan-400 
+                   border-2 border-cyan-400 rounded-lg 
+                   hover:bg-cyan-400 hover:text-white 
+                   transition-colors duration-300"
+      >
+        👀 View Online
+      </motion.a>
+    </motion.div>
+  </motion.div>
+</div>
 
-                      
-              <p>
-                I'm <strong>Sandesh Jadhav</strong>, a passionate <strong>Java Developer</strong> 
-                and <strong>Full-Stack Enthusiast</strong> with experience in building scalable 
-                and efficient web applications.
-              </p>
-              <p>
-                Skilled in <strong>React</strong>, <strong>Spring Boot</strong>, and <strong>MySQL</strong>, 
-                I specialize in transforming ideas into real-world solutions with clean and maintainable code.
-              </p>
-              <p>
-                I’m always eager to explore <strong>new frameworks</strong>, optimize performance, and 
-                leverage technology to solve impactful problems.
-              </p>
-              <p>
-                My goal is to grow as a versatile developer and contribute to innovative projects that matter.
-              </p>
-            </motion.div>
-
-            
-          </div>
 
           {/* Skill Cards */}
           <div className="flex flex-col md:flex-row gap-6 justify-center mt-16">
