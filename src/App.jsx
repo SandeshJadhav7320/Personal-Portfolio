@@ -6,6 +6,7 @@ import Navbar from './pages/Navbar'
 import About from './pages/About';
 import Skills from "./pages/Skills";
 import Projects from "./pages/Projects";
+import Footer from './pages/Footer'
 function App() {
 
   return (
@@ -17,6 +18,7 @@ function App() {
             <Route path='/about' element={<About/>}/>
             <Route path='/skills' element={<Skills/>}/>
             <Route path='/projects' element={<Projects/>}/>
+            <Route path='/footer' element={<Footer/>}/>
 
           </Routes>
       </BrowserRouter>

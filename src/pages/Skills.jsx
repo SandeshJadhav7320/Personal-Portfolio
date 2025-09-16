@@ -5,6 +5,7 @@ import Tilt from "react-parallax-tilt";
 import { FaReact, FaJava, FaGithub, FaDatabase } from "react-icons/fa";
 import { SiTailwindcss, SiSpringboot, SiMysql } from "react-icons/si";
 import Navbar from "./Navbar";
+import Footer from "../pages/Footer";
 
 function Skills() {
   const skillCategories = [
@@ -92,6 +93,7 @@ function Skills() {
             </div>
           </div>
         </section>
+        <Footer></Footer>
     </>
     
   );

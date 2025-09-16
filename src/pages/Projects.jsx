@@ -7,6 +7,7 @@ import portfolioHome from "../assets/PortfolioHome.png"; // adjust path
 import carrerhome from "../assets/carrerhome.png";
 import HosImg from "../assets/HspImg.png";
 import Navbar from "./Navbar";
+import Footer from "../pages/Footer";
 
 
 function Projects() {
@@ -113,6 +114,7 @@ function Projects() {
             </div>
           </div>
         </section>
+        <Footer></Footer>
     </>
     
   );

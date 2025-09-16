@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
 import Navbar from "/src/pages/Navbar";
 import self from "../assets/self.jpeg";
+import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 
 function Home() {
@@ -65,12 +66,37 @@ function Home() {
               I'm a passionate Java Developer working with React, Spring Boot, and MySQL. I build websites and applications that are responsive, fast, and user-friendly. I'm also experienced with GitHub for managing and sharing code. Always learning, always building!
             </motion.p>
 
-            {/* Social icons */}
-            <div className="flex space-x-4 mt-4">
-              <a href="#" className="text-cyan-400 hover:text-white text-xl"><i className="fab fa-facebook-f"></i></a>
-              <a href="#" className="text-cyan-400 hover:text-white text-xl"><i className="fab fa-whatsapp"></i></a>
-              <a href="#" className="text-cyan-400 hover:text-white text-xl"><i className="fab fa-github"></i></a>
-            </div>
+            {/* Social Icons */}
+            <div className="flex space-x-6 mt-4 ">
+              <motion.a
+                href="https://github.com/SandeshJadhav7320"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.2 }}
+                className="text-cyan-400 hover:text-white text-2xl animate-bounce"
+              >
+                <FaGithub />
+              </motion.a>
+
+              <motion.a
+                href="https://www.linkedin.com/in/sandesh-jadhav-08b19132a/"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.2 }}
+                className="text-cyan-400 hover:text-white text-2xl animate-bounce"
+              >
+                <FaLinkedin />
+              </motion.a>
+
+              <motion.a
+                href="mailto:sandeshj9995@gmail.com"
+                whileHover={{ scale: 1.2 }}
+                className="text-cyan-400 hover:text-white text-2xl animate-bounce"
+              >
+                <FaEnvelope />
+              </motion.a>
+          </div>
+
           </div>
 
           {/* Right Side - Image with Animated Background */}
@@ -84,8 +110,8 @@ function Home() {
             />
           </div>
         </div>
-      </section>
-
+        
+      </section>         
      
     </>
   );

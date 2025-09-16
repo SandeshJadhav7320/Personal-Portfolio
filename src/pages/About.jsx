@@ -6,6 +6,7 @@ import { FaCode, FaDatabase, FaTools } from "react-icons/fa";
 import CountUp from "react-countup";
 import Navbar from "./Navbar";
 import self2 from "../assets/self2.jpeg";
+import Footer from "../pages/Footer";
 
 function About() { 
   const skills = [
@@ -159,6 +160,7 @@ function About() {
           </div>
         </div>
       </section>
+      <Footer></Footer>
     </>
   );
 }
