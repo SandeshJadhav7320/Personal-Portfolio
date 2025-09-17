@@ -44,7 +44,7 @@ const Navbar = () => {
           <li><Link to="/about" className="hover:text-gray-500 font-bold text-2xl">About</Link></li>
           <li><Link to="/skills" className="hover:text-gray-500 font-bold text-2xl">Skills</Link></li>
           <li><Link to="/projects" className="hover:text-gray-500 font-bold text-2xl">Projects</Link></li>
-          <li><Link to="#contact" className="hover:text-gray-500 font-bold text-2xl">Contact</Link></li>
+          <li><Link to="/contact" className="hover:text-gray-500 font-bold text-2xl">Contact</Link></li>
         </ul>
       </div>
 
@@ -55,7 +55,7 @@ const Navbar = () => {
           <li><Link to="/about" onClick={() => setIsOpen(false)}>About</Link></li>
           <li><Link to="/projects" onClick={() => setIsOpen(false)}>Projects</Link></li>
           <li><Link to="/skills" onClick={() => setIsOpen(false)}>Skills</Link></li>
-          <li><Link to="#contact" onClick={() => setIsOpen(false)}>Contact</Link></li>
+          <li><Link to="/contact" onClick={() => setIsOpen(false)}>Contact</Link></li>
         </ul>
       )}
     </nav>

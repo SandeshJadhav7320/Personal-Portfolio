@@ -7,6 +7,7 @@ import About from './pages/About';
 import Skills from "./pages/Skills";
 import Projects from "./pages/Projects";
 import Footer from './pages/Footer'
+import Contact from './pages/Concat'
 function App() {
 
   return (
@@ -19,6 +20,7 @@ function App() {
             <Route path='/skills' element={<Skills/>}/>
             <Route path='/projects' element={<Projects/>}/>
             <Route path='/footer' element={<Footer/>}/>
+            <Route path='/contact' element={<Contact/>}/>
 
           </Routes>
       </BrowserRouter>
