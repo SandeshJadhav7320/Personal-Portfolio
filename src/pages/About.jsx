@@ -117,7 +117,7 @@ function About() {
                    hover:bg-cyan-400 hover:text-white 
                    transition-colors duration-300"
       >
-        👀 View Online
+        👀 View CV
       </motion.a>
     </motion.div>
   </motion.div>
