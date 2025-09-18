@@ -11,27 +11,38 @@ function Contact() {
   const formRef = useRef();
   const [done, setDone] = useState(false);
 
-  const sendEmail = (e) => {
-    e.preventDefault();
+const sendEmail = (e) => {
+  e.preventDefault();
 
-    emailjs
-      .sendForm(
-        "service_t73cgzq",     // Replace with EmailJS Service ID
-        "template_99kj96p",    // Replace with EmailJS Template ID
-        formRef.current,
-        "s7uz6wlqfR00ta4LD"      // Replace with EmailJS Public Key
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-          setDone(true);
-          e.target.reset();
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
-  };
+  // Send message to yourself
+  emailjs
+    .sendForm(
+      "service_t73cgzq",
+      "template_99kj96p", // Your main template
+      formRef.current,
+      "s7uz6wlqfR00ta4LD"
+    )
+    .then(
+      (result) => {
+        console.log("Message sent to me:", result.text);
+
+        // Auto-reply to user
+        emailjs.sendForm(
+          "service_t73cgzq",
+          "template_3hb49xi", // Your auto-reply template ID
+          formRef.current,
+          "s7uz6wlqfR00ta4LD"
+        );
+
+        setDone(true);
+        e.target.reset();
+      },
+      (error) => {
+        console.log("Error:", error.text);
+      }
+    );
+};
+
 
   return (
     <>
